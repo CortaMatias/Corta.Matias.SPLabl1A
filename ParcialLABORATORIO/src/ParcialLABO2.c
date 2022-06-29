@@ -26,7 +26,7 @@ int main(void) {
 			switch(menu()){
 
 			case 1:
-				cargarArchivo(lista);
+				controller_cargarArchivo(lista);
 				break;
 			case 2:
 				if(ll_len(lista) > 0)

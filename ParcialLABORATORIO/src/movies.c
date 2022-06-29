@@ -46,6 +46,7 @@ int printMovies(LinkedList *lista)
 	eMovies *movie;
 	if (lista != NULL)
 	{
+		printf("           *** LISTADO DE PELICULAS *** \n");
 		printf("%5s %30s %15s  %5s\n", "Id", "Nombre", "Genero", "Rating");
 		printf("----------------------------------------------------------\n");
 		for (int i = 0; i < ll_len(lista); i++)
@@ -198,7 +199,7 @@ int menuFiltrarGenero()
 	printf("4)Terror\n");
 	printf("5)SALIR\n");
 
-	validarInt("\nIngrese la opcion de como desea filtrar\n", "\nError.Ingrese la opcion de como desea filtrar \n", &opcion, 0, 5);
+	validarInt("\n\n\nIngrese la opcion de como desea filtrar\n", "\n\n\nError.Ingrese la opcion de como desea filtrar \n", &opcion, 0, 5);
 
 	return opcion;
 }

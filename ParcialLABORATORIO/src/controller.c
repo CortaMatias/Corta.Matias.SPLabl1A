@@ -14,7 +14,7 @@ int controller_cargarArchivo(LinkedList *lista)
 	if (lista != NULL)
 	{
 
-		printf("Ingrese el nombre del archivo que desea cargar:  Ej: movies.csv \n");
+		printf("\n\nIngrese el nombre del archivo que desea cargar:  Ej: movies.csv \n");
 		fflush(stdin);
 		fgets(archivo, 30, stdin);
 		limpiarBarraN(archivo);
@@ -26,7 +26,7 @@ int controller_cargarArchivo(LinkedList *lista)
 			if (data == NULL)
 			{
 				todoOk = 0;
-				printf("error al abrir el archivo\n");
+				printf("\n\nerror al abrir el archivo\n");
 			}
 			else
 			{
@@ -35,19 +35,19 @@ int controller_cargarArchivo(LinkedList *lista)
 				{
 					todoOk = parser_PassengerFromText(data, lista);
 
-					printf("Cargado\n");
+					printf("\n\nCargado\n");
 				}
 				else
 				{ // si tiene datos, hacemos el backUp
 					if (!controller_saveAsText("backUp.csv", lista))
 					{
-						printf("Los datos fueron cargados, pero no se pudo hacer el backUp");
+						printf("\n\nLos datos fueron cargados, pero no se pudo hacer el backUp\n\n");
 						ll_clear(lista);
 						todoOk = parser_PassengerFromText(data, lista);
 					}
 					else
 					{
-						printf("Se han sobre-escrito los datos, se hizo un backUp en \"backUp.csv\"");
+						printf("\n\nSe han sobre-escrito los datos, se hizo un backUp en \"backUp.csv\" \n\n");
 						ll_clear(lista);
 						todoOk = parser_PassengerFromText(data, lista);
 					}
@@ -69,7 +69,7 @@ int controller_saveAsText(char *path, LinkedList *lista)
 		if (data == NULL)
 		{
 			todoOk = 0;
-			printf("error al abrir el archivo\n");
+			printf("\n\nerror al abrir el archivo\n");
 		}
 		else if (ll_len(lista) > 0)
 		{
@@ -97,7 +97,7 @@ int controller_saveAsBinary(char *path, LinkedList *lista)
 		if (data == NULL)
 		{
 			todoOk = 0;
-			printf("\nerror al abrir el archivo\n");
+			printf("\n\n\nerror al abrir el archivo\n");
 		}
 
 		if (ll_len(lista) > 0)

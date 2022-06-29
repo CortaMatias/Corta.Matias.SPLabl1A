@@ -66,7 +66,7 @@ int menuFiltrarGenero();
 /**
  * @brief Asigna un valor al campo rating entre 1.0 y 10.0
  * 
- * @param a void* elemento de la lista. 
+ * @param a void* elemento de la lista de peliculas.
  * @return void* retorna el elemento de la lista con el rating ya asignado en su campo
  */
 void* asignarRating(void* a);
