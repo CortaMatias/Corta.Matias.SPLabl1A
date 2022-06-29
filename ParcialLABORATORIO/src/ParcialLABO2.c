@@ -14,7 +14,7 @@
 #include "controller.h"
 
 int main(void) {
-	setbuf(stdout, NULL);
+		setbuf(stdout, NULL);
 		int opcion;
 		srand(time(NULL));
 		LinkedList* lista = ll_newLinkedList();
@@ -34,6 +34,8 @@ int main(void) {
 				if(ll_len(lista) > 0)
 				{
 					printMovies(lista);
+				}else{
+					printf("\n\nNo hay peliculas en la lista\n\n");
 				}
 						break;
 			case 3:

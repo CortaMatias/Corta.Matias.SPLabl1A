@@ -13,6 +13,8 @@
 #endif /* CONTROLLER_H_ */
 #include "movies.h"
 #include "LinkedList.h"
+#include "library.h"
+#include "parser.h"
 
 /**
  * @brief Guarda los datos de la lista en el archivo data.csv (modo txt).

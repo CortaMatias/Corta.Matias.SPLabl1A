@@ -5,15 +5,13 @@
  *      Author: Matias
  */
 #include "movies.h"
-#include "parser.h"
-#include "library.h"
-#include "LinkedList.h"
-#include "controller.h"
+
 
 int menu()
 {
 	int opcion;
-	printf("\n\n  *** MENU ***\n");
+	printf("\n\n *** MENU ***\n");
+	printf("---------------------------------\n");
 	printf("1)Cargar archivo.\n");
 	printf("2)Mostrar lista de peliculas.\n");
 	printf("3)Mapear rating.\n");
@@ -22,8 +20,8 @@ int menu()
 	printf("6)Ordenar peliculas por genero y rating.\n");
 	printf("7)Guardar peliculas ordenadas.\n");
 	printf("8)Salir.\n");
-
-	validarInt("\nIngrese la opcion que desea elegir\n", "\nError.Ingrese la opcion que desea elegir \n", &opcion, 0, 8);
+	printf("---------------------------------\n");
+	validarInt("\n\nIngrese la opcion que desea elegir\n", "\nError.Ingrese la opcion que desea elegir \n", &opcion, 0, 8);
 
 	return opcion;
 }
@@ -192,13 +190,14 @@ int eMovies_filterAccion(void *a)
 int menuFiltrarGenero()
 {
 	int opcion;
-
-	printf("\n\n\n\n1)Drama \n");
+	printf("\n\n *** MENU ***\n");
+	printf("---------------------------------\n");
+	printf("1)Drama \n");
 	printf("2)Comedia\n");
 	printf("3)Accion\n");
 	printf("4)Terror\n");
 	printf("5)SALIR\n");
-
+	printf("---------------------------------\n");
 	validarInt("\n\n\nIngrese la opcion de como desea filtrar\n", "\n\n\nError.Ingrese la opcion de como desea filtrar \n", &opcion, 0, 5);
 
 	return opcion;

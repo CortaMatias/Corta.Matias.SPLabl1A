@@ -158,18 +158,22 @@ int controller_filtrarGenero(LinkedList *lista, LinkedList *filter)
 			case 1:
 				filter = ll_filter(lista, eMovies_filterDrama);
 				controller_saveAsTextTemporal("filterDrama.csv", filter, "w");
+				printf("La lista filtrada se guardo en el archivo - filterDrama.csv -");
 				break;
 			case 2:
 				filter = ll_filter(lista, eMovies_filterComedy);
 				controller_saveAsTextTemporal("filterComedy.csv", filter, "w");
+				printf("La lista filtrada se guardo en el archivo - filterComedy.csv -");
 				break;
 			case 3:
 				filter = ll_filter(lista, eMovies_filterAccion);
 				controller_saveAsTextTemporal("filterAccion.csv", filter, "w");
+				printf("La lista filtrada se guardo en el archivo - filterAccion.csv -");
 				break;
 			case 4:
 				filter = ll_filter(lista, eMovies_filterTerror);
 				controller_saveAsTextTemporal("filterTerror.csv", filter, "w");
+				printf("La lista filtrada se guardo en el archivo - filterTerror.csv -");
 				break;
 			case 5:
 				opcion = 12;
