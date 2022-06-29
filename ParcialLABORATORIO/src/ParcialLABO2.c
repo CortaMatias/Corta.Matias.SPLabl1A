@@ -22,6 +22,8 @@ int main(void) {
 		int flagSort = 0;
 		int flagGenero = 0;
 		int flagRating= 0;
+
+			if(lista != NULL){
 		do{
 			switch(menu()){
 
@@ -87,6 +89,9 @@ int main(void) {
 
 			}
 
-		}while(opcion != 8);
+			}while(opcion != 8);
+		}else{
+			printf("Error al pedir memoria.");
+		}
 	return EXIT_SUCCESS;
 }

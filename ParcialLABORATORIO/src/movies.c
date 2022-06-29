@@ -13,15 +13,15 @@
 int menu()
 {
 	int opcion;
-
-	printf("\n\n\n1)Cargar archivo\n");
-	printf("2)Mostrar lista de peliculas\n");
-	printf("3)Mapear rating\n");
-	printf("4)Mapear Genero\n");
-	printf("5)Filtrar por genero\n");
-	printf("6)Ordenar peliculas por genero y rating\n");
-	printf("7)Guardar peliculas ordenadas\n");
-	printf("8)Salir\n");
+	printf("\n\n  *** MENU ***\n");
+	printf("1)Cargar archivo.\n");
+	printf("2)Mostrar lista de peliculas.\n");
+	printf("3)Mapear rating.\n");
+	printf("4)Mapear Genero.\n");
+	printf("5)Filtrar por genero.\n");
+	printf("6)Ordenar peliculas por genero y rating.\n");
+	printf("7)Guardar peliculas ordenadas.\n");
+	printf("8)Salir.\n");
 
 	validarInt("\nIngrese la opcion que desea elegir\n", "\nError.Ingrese la opcion que desea elegir \n", &opcion, 0, 8);
 
