@@ -23,6 +23,7 @@ typedef struct{
 #include <string.h>
 #include <time.h>
 #include "LinkedList.h"
+#include "library.h"
 
 /**
  * @brief muestra el menu principal con sus opciones
